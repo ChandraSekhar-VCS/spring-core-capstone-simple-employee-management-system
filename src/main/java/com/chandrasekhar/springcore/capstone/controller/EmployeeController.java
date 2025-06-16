@@ -3,6 +3,7 @@ package com.chandrasekhar.springcore.capstone.controller;
 import com.chandrasekhar.springcore.capstone.model.Employee;
 import com.chandrasekhar.springcore.capstone.service.EmployeeService;
 import com.chandrasekhar.springcore.capstone.service.Notifier;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
@@ -17,6 +18,7 @@ public class EmployeeController {
     public EmployeeController(EmployeeService employeeService){
         this.employeeService = employeeService;
     }
+    @Autowired
     public void setNotifier(Notifier notifier){
         this.notifier = notifier;
     }
